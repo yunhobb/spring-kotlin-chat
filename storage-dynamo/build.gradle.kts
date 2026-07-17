@@ -15,5 +15,6 @@ dependencies {
     implementation(platform(libs.aws.bom))
     implementation(project(":chat-core"))
     implementation(libs.spring.context)
+    implementation(libs.spring.boot)
     implementation(libs.aws.dynamodb.enhanced)
 }
