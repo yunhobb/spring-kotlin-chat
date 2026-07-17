@@ -12,5 +12,5 @@ class PodIdentity(
     @Value("\${POD_NAME:local}") val podId: String,
 ) {
     /** 이 파드가 구독하는 팬아웃 채널. */
-    val channel: String = "chat:pod:$podId"
+    val channel: String = PodChannels.forPod(podId)
 }

@@ -16,11 +16,10 @@ class RedisFanoutPublisher(
 ) : FanoutPublisher {
 
     override fun publish(target: SessionLocation, message: Message) {
+        // 채널 라우팅은 PodChannels로 확정됨. 페이로드 직렬화 포맷만 남았다.
         // TODO: 직렬화 포맷 확정 후 구현. 컷오버 Phase 2의 신구 브리지(§6-3)와 포맷을 맞춰야 한다.
+        //  val channel = PodChannels.forPod(target.podId)
+        //  redis.convertAndSend(channel, <serialized payload>)
         TODO("팬아웃 페이로드 직렬화 포맷 확정 후 구현")
-    }
-
-    companion object {
-        fun channelOf(podId: String): String = "chat:pod:$podId"
     }
 }

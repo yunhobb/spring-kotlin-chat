@@ -4,6 +4,7 @@ spring-boot = "4.1.0"
 aws-sdk = "2.46.7"
 jackson-kotlin = "3.2.1"
 kotest = "6.2.2"
+mockk = "1.14.11"
 
 [libraries]
 spring-boot-bom = { module = "org.springframework.boot:spring-boot-dependencies", version.ref = "spring-boot" }
@@ -18,6 +19,7 @@ spring-boot-starter-restclient = { module = "org.springframework.boot:spring-boo
 spring-boot-starter-test = { module = "org.springframework.boot:spring-boot-starter-test" }
 kotest-runner-junit5 = { module = "io.kotest:kotest-runner-junit5", version.ref = "kotest" }
 kotest-assertions-core = { module = "io.kotest:kotest-assertions-core", version.ref = "kotest" }
+mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
 spring-boot = { module = "org.springframework.boot:spring-boot" }
 spring-context = { module = "org.springframework:spring-context" }
 spring-web = { module = "org.springframework:spring-web" }

@@ -14,4 +14,11 @@ dependencies {
     implementation(platform(libs.spring.boot.bom))
     implementation(project(":chat-core"))
     implementation(libs.spring.boot.starter.data.redis)
+
+    testImplementation(libs.kotest.runner.junit5)
+    testImplementation(libs.kotest.assertions.core)
+}
+
+tasks.withType<Test> {
+    useJUnitPlatform()
 }
