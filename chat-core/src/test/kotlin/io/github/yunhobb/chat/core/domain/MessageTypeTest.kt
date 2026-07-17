@@ -6,7 +6,7 @@ import io.kotest.matchers.shouldBe
 
 class MessageTypeTest : StringSpec({
 
-    "관측된 wire 값을 enum으로 매핑한다 (LEGACY_API.md)" {
+    "관측된 wire 값을 enum으로 매핑한다 (docs/legacy-api.md)" {
         MessageType.fromWire("textMessage") shouldBe MessageType.TEXT
         MessageType.fromWire("productMessage") shouldBe MessageType.PRODUCT
         MessageType.fromWire("noticeMessage") shouldBe MessageType.NOTICE

@@ -29,6 +29,6 @@ class LegacyChatWebSocketHandler(
 
     override fun afterConnectionClosed(session: WebSocketSession, status: CloseStatus) {
         // TODO: localSessions.remove + SessionRegistry.unregister.
-        //  파드 강제 종료 대비 레지스트리 TTL이 최종 안전망이다 (DESIGN.md §3).
+        //  파드 강제 종료 대비 레지스트리 TTL이 최종 안전망이다 (docs/architecture.md §3).
     }
 }

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component
 
 /**
  * 대상 유저가 붙은 파드의 채널("chat:pod:{podId}")로 발행한다.
- * 실시간 홉은 best-effort — 유실은 DB + 클라이언트 재조회가 복구한다 (DESIGN.md §3).
+ * 실시간 홉은 best-effort — 유실은 DB + 클라이언트 재조회가 복구한다 (docs/architecture.md §3).
  */
 @Component
 class RedisFanoutPublisher(

@@ -3,7 +3,7 @@ package io.github.yunhobb.chat.core.domain
 import java.time.Instant
 
 /**
- * 읽음 상태 계산 (LEGACY_API.md 발견 반영).
+ * 읽음 상태 계산 (docs/legacy-api.md 발견 반영).
  *
  * 레거시는 메시지별 읽음 플래그가 없다. 각 멤버의 lastReadAt(워터마크)만 저장하고,
  * 특정 메시지가 읽혔는지는 message.sentAt 과 워터마크를 비교해 파생한다.

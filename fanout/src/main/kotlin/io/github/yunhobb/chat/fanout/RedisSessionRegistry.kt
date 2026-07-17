@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component
 
 /**
  * user → pod 매핑. 키에 TTL을 걸고 하트비트마다 갱신해서
- * 파드 비정상 종료로 남는 유령 엔트리를 정리한다 (DESIGN.md §3).
+ * 파드 비정상 종료로 남는 유령 엔트리를 정리한다 (docs/architecture.md §3).
  */
 @Component
 class RedisSessionRegistry(

@@ -40,7 +40,7 @@ GET  /api/chat/quick-buttons
 # + cross-function-api.example.com/user/info/chat-available (타 서비스 소관)
 ```
 
-> 레거시 REST 계약 상세 관측 결과는 **[LEGACY_API.md](LEGACY_API.md)** 참조 (2026-07-17 완료, §6-1 부분).
+> 레거시 REST 계약 상세 관측 결과는 **[legacy-api.md](legacy-api.md)** 참조 (2026-07-17 완료, §6-1 부분).
 > 핵심 발견: ① 웹엔 실시간 채널 없음(WS는 앱 전용) ② 읽음은 per-message 플래그가 아니라 **멤버별 `lastReadAt`(epoch millis) 워터마크** ③ messageType = textMessage/productMessage/noticeMessage ④ messageId는 number 시퀀스 ⑤ 응답 봉투 `{meta, data}`.
 
 ### 기능 패리티 목록

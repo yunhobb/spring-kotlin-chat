@@ -1,6 +1,6 @@
 # chat-spring-kotlin
 
-마켓플레이스 채팅 서버 재구축 (strangler-fig 서버 교체). 배경과 결정 사항은 **[DESIGN.md](DESIGN.md)** 참조.
+마켓플레이스 채팅 서버 재구축 (strangler-fig 서버 교체). 설계·조사·결정 문서는 **[docs/](docs/README.md)** 참조, 프로젝트 규칙은 **[CLAUDE.md](CLAUDE.md)**.
 
 ## 요구 사항
 
@@ -24,5 +24,5 @@
 
 ## 현재 상태
 
-스캐폴딩 단계. 선행 조사(DESIGN.md §6: 레거시 WS 프레임 규격, DynamoDB 스키마, 구 팬아웃 구조)가
-끝나기 전까지 어댑터 구현부는 `TODO(...)` 스텁이다.
+chat-core 도메인 4단위 TDD 완료. 선행 조사([docs/architecture.md](docs/architecture.md) §6: 레거시 WS 프레임 규격,
+DynamoDB 스키마, 구 팬아웃 구조)가 끝나기 전까지 어댑터 구현부는 `TODO(...)` 스텁이다.

@@ -10,7 +10,7 @@ import software.amazon.awssdk.regions.Region
 import software.amazon.awssdk.services.dynamodb.DynamoDbClient
 
 /**
- * 동기 클라이언트를 쓴다 — 요청 처리는 가상 스레드 위에서 블로킹해도 된다 (DESIGN.md §1-3).
+ * 동기 클라이언트를 쓴다 — 요청 처리는 가상 스레드 위에서 블로킹해도 된다 (docs/architecture.md §1-3).
  * 자격 증명은 EKS의 IRSA(default credentials chain)로 해석된다.
  */
 @Configuration

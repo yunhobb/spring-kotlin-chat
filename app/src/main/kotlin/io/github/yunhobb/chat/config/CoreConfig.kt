@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 
 /**
- * chat-core는 Spring 무의존이므로 유스케이스 빈 조립은 여기서만 한다 (DESIGN.md §4).
+ * chat-core는 Spring 무의존이므로 유스케이스 빈 조립은 여기서만 한다 (docs/architecture.md §4).
  */
 @Configuration
 class CoreConfig {

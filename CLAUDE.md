@@ -1,6 +1,6 @@
 # 프로젝트 규칙 (Kotlin + Spring 컨벤션)
 
-마켓플레이스 채팅 서버 재구축(strangler-fig 서버 교체). 배경·결정은 [DESIGN.md](DESIGN.md), 레거시 계약은 [LEGACY_API.md](LEGACY_API.md).
+마켓플레이스 채팅 서버 재구축(strangler-fig 서버 교체). 설계·조사·ADR은 [docs/](docs/README.md) — 아키텍처 [docs/architecture.md](docs/architecture.md), 레거시 계약 [docs/legacy-api.md](docs/legacy-api.md), 실시간/세션 [docs/realtime-and-session-design.md](docs/realtime-and-session-design.md).
 
 > 이 파일은 세션마다 자동 로드된다. 새 코드는 아래 규칙을 따르고, 규칙과 어긋나는 기존 코드를 만지면 규칙 쪽으로 맞춘다.
 
@@ -43,7 +43,7 @@
 
 ## 프로젝트 불변식 (절대 깨지 말 것)
 
-- **계약 유지**: 기존 앱 무수정이 원칙. `/api/chat/*` 경로·응답 봉투(`{meta,data}`)·`roomId={storeSeq}_{storeSeq}`·WS 프레임 프로토콜을 임의로 바꾸지 않는다. 스키마는 LEGACY_API.md 기준.
+- **계약 유지**: 기존 앱 무수정이 원칙. `/api/chat/*` 경로·응답 봉투(`{meta,data}`)·`roomId={storeSeq}_{storeSeq}`·WS 프레임 프로토콜을 임의로 바꾸지 않는다. 스키마는 docs/legacy-api.md 기준.
 - **읽음 모델**: per-message 플래그가 아니라 멤버별 `lastReadAt`(epoch millis) 워터마크(`ReadModel`).
 - **실시간은 best-effort, 정합성은 DB**: Redis 팬아웃 유실은 DB + 클라 재조회로 복구. 실시간 홉을 신뢰성 채널로 취급하지 말 것.
 - **탈식별화 유지**: 패키지 `io.github.yunhobb.chat`, 문서 호스트명 `example.com`. 특정 회사 브랜드(한글/로마자) 워딩을 코드·문서·커밋에 다시 넣지 않는다.

@@ -3,7 +3,7 @@ package io.github.yunhobb.chat.core.domain
 /**
  * 기존 시스템의 방 식별자 형식 "{storeSeq}_{storeSeq}"를 그대로 유지한다 (계약 유지 원칙).
  *
- * TODO(선행 조사 DESIGN.md §6-2): 두 storeSeq의 순서 규칙(정렬 canonical인지, 생성자 기준인지)은
+ * TODO(선행 조사 docs/architecture.md §6-2): 두 storeSeq의 순서 규칙(정렬 canonical인지, 생성자 기준인지)은
  *  기존 DynamoDB 데이터 확인 전까지 미확정. 확정 전에는 [of]를 신규 방 생성에 사용하지 말 것.
  */
 @JvmInline

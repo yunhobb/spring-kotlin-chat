@@ -2,7 +2,7 @@
 
 > 2026-07-17, 로그인된 본인 세션에서 `web.example.com` 채팅이 실제로 주고받는 트래픽을 관찰해 도출.
 > **실제 대화 내용·상대 닉네임·프로필·토큰 등 개인정보는 기록하지 않는다.** 필드명과 타입(스키마)만 남긴다.
-> 이 문서는 "계약 그대로 유지"(DESIGN.md §1-6) 구현의 기준 계약이다.
+> 이 문서는 "계약 그대로 유지"(architecture.md §1-6) 구현의 기준 계약이다.
 
 ## 관측 방법·범위
 
@@ -151,7 +151,7 @@ data: {
 | `from`/`to`, `last_message_at` 페이지네이션 정확한 의미 | 경계·정렬 방향 데이터 확인 필요 |
 | roomId storeSeq 순서 규칙, messageId 채번 규칙 | §6-2 DynamoDB 데이터로 확정 |
 
-## 설계 반영 포인트 (DESIGN.md 갱신 대상)
+## 설계 반영 포인트 (architecture.md 갱신 대상)
 
 1. **읽음 모델**: per-message 플래그가 아니라 **멤버별 `lastReadAt`(epoch millis) 워터마크**. 우리 `chat-core`의 읽음 설계를 seq 기반이 아니라 이 워터마크 계약에 맞춰야 함(계약 유지).
 2. **messageId가 number 시퀀스**: v2 seq/ack/resync 설계 시 재활용 가능.

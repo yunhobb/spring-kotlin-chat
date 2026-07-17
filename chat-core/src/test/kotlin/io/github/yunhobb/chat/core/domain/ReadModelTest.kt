@@ -5,7 +5,7 @@ import io.kotest.matchers.shouldBe
 import java.time.Instant
 
 /**
- * 레거시 읽음 모델(LEGACY_API.md): per-message 플래그가 아니라 멤버별 lastReadAt(워터마크).
+ * 레거시 읽음 모델(docs/legacy-api.md): per-message 플래그가 아니라 멤버별 lastReadAt(워터마크).
  * "읽음/안읽음"은 message.sentAt 과 상대 lastReadAt 비교로 계산한다. 워터마크는 포함(inclusive).
  */
 class ReadModelTest : StringSpec({
